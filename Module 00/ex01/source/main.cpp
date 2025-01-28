@@ -3,32 +3,54 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rdedola <rdedola@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/16 10:54:15 by rdedola           #+#    #+#             */
-/*   Updated: 2025/01/16 13:43:19 by rdedola          ###   ########.fr       */
+/*   Created: 2025/01/21 16:03:32 by rdedola           #+#    #+#             */
+/*   Updated: 2025/01/22 16:59:01 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook.hpp"
-#include "Contact.hpp"
+#include "../includes/PhoneBook.hpp"
 
 int	main()
 {
-	std::string input;
+	PhoneBook	phoneBook;
+	std::string	input;
+
+	std::cout << RED "██████╗ ██╗  ██╗ ██████╗ ███╗   ██╗███████╗██████╗  ██████╗  ██████╗ ██╗  ██╗" RESET << std::endl;
+	std::cout << RED "██╔══██╗██║  ██║██╔═══██╗████╗  ██║██╔════╝██╔══██╗██╔═══██╗██╔═══██╗██║ ██╔╝" RESET << std::endl;
+	std::cout << RED "██████╔╝███████║██║   ██║██╔██╗ ██║█████╗  ██████╔╝██║   ██║██║   ██║█████╔╝ " RESET << std::endl;
+	std::cout << RED "██╔═══╝ ██╔══██║██║   ██║██║╚██╗██║██╔══╝  ██╔══██╗██║   ██║██║   ██║██╔═██╗ " RESET << std::endl;
+	std::cout << RED "██║     ██║  ██║╚██████╔╝██║ ╚████║███████╗██████╔╝╚██████╔╝╚██████╔╝██║  ██╗" RESET << std::endl;
+	std::cout << RED "╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═════╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝" RESET << std::endl;
+	std::cout << RED "============================= ☭ USSR EDITION ☭ =============================" RESET << std::endl;
 
 	while (1)
 	{
-		std::cout << "Enter your command : ";
+		std::cout << std::endl << BOLD "Enter a command: " RESET;
 		if (!std::getline(std::cin, input))
 		{
-			std::cout << RED "\nCtrl + D, exiting..." RESET << std::endl;
-			return (1);
+			std::cout << std::endl << RED "PhoneBook Closed." RESET << std::endl;
+			break ;
 		}
-		if (input.empty())
+		if (input == "ADD")
 		{
-			std::cout << RED "Wrong command" RESET << std::endl;
-			continue ;
+			if  (!phoneBook.addContact())
+				std::cerr << RED "ERROR" RESET; 
 		}
-		Contact;
+		else if (input == "SEARCH")
+		{
+			if  (!phoneBook.searchContact())
+				std::cerr << RED "ERROR" RESET; 
+		}
+		else if (input == "EXIT")
+		{
+			std::cout << RED "☭ THANKS FOR USING OUR PHONEBOOK COMRADE ☭" RESET << std::endl;
+			std::cout << RED "PHONEBOOK CLOSED" RESET << std::endl;
+			break ;
+		}
+		else
+			std::cout << RED "Invalid command, try again:" RESET;
+	}
+	return (0);
 }

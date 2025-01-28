@@ -1,45 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdedola <rdedola@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/21 16:03:13 by rdedola           #+#    #+#             */
-/*   Updated: 2025/01/22 15:44:18 by rdedola          ###   ########.fr       */
+/*   Created: 2025/01/13 16:07:54 by rdedola           #+#    #+#             */
+/*   Updated: 2025/01/13 18:14:08 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
-
 #include <iostream>
-#include <iomanip>
-#include <string>
 #include <cctype>
 
-#include "Contact.hpp"
-
-# define ITALIC		"\e[3m"
-# define BOLD		"\e[1m"
-# define GREEN		"\e[32m"
-# define RED		"\e[31m"
-# define RESET		"\e[0m"
-
-class PhoneBook
+int	main(int argc, char **argv)
 {
-private:
-	Contact		_contacts[8];
-	int			_nb_contact;
-	int			_index;
-public:
-	//Constructor
-	PhoneBook();
-	
-	//Methods
-	bool	addContact();
-	bool	searchContact();
-	void	printContact(int index);
-};
-
-#endif
+	if (argc == 1)
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+	for (int i = 1; i < argc; i++)
+	{
+		for (int j = 0; argv[i][j]; j++)
+			std::cout << static_cast<char>(std::toupper(argv[i][j]));
+		std::cout << " ";
+	}
+	std::cout << std::endl;
+}
