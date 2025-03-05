@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rdedola <rdedola@student.42nice.fr>        +#+  +:+       +#+         #
+#    By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/21 15:59:59 by rdedola           #+#    #+#              #
-#    Updated: 2025/01/21 17:11:25 by rdedola          ###   ########.fr        #
+#    Updated: 2025/02/05 09:17:57 by rdedola          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = phonebook
 
 SRC =	./source/main.cpp \
 		./source/Contact.cpp \
-		./source/Phonebook.cpp \
+		./source/PhoneBook.cpp \
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
