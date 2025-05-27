@@ -6,20 +6,18 @@
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 09:21:42 by rdedola           #+#    #+#             */
-/*   Updated: 2025/03/05 10:13:27 by rdedola          ###   ########.fr       */
+/*   Updated: 2025/04/02 14:16:24 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/Fixed.hpp"
 
-Fixed::Fixed()
-	:	_nb(0)
+Fixed::Fixed() : _nb(0)
 {
 	std::cout << "Default constructor called" << std::endl;
 }
 
-Fixed::Fixed(const Fixed &copy)
-	:	_nb(copy._nb)
+Fixed::Fixed(const Fixed &copy) : _nb(copy._nb)
 {
 	std::cout << "Copy constructor called" << std::endl;
 }

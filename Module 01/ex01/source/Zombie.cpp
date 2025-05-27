@@ -15,19 +15,19 @@
 
 Zombie::Zombie()
 {
-
+	std::cout << "Default constructor called\n";
 }
 void    Zombie::setName( std::string newName )
 {
-    this->_name = newName;
+	this->_name = newName;
 }
 
 void    Zombie::announce()
 {
-    std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 Zombie::~Zombie()
 {
-    std::cout << this->_name << " is destroyed !" << std::endl;
+	std::cout << this->_name << " is destroyed !" << std::endl;
 }

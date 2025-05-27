@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 09:21:32 by rdedola           #+#    #+#             */
-/*   Updated: 2025/04/02 14:16:28 by rdedola          ###   ########.fr       */
+/*   Created: 2025/05/27 14:23:23 by rdedola           #+#    #+#             */
+/*   Updated: 2025/05/27 14:35:07 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#pragma once
 
-# include <iostream>
+#include "WrongAnimal.hpp"
 
-class Fixed
+class WrongCat : public WrongAnimal
 {
 	public:
-		Fixed();
-		Fixed(const Fixed &copy);
-		Fixed &operator = (const Fixed &copy);
-		~Fixed();
+		WrongCat();
+		WrongCat(const WrongCat &copy);
+		WrongCat	&operator = (const WrongCat &copy);
+		~WrongCat();
 
-		int		getRawBits() const;
-		void	setRawBits(const int raw);
-		
-	private:
-		int					_nb;
-		static const int	_bit = 8;
+		void	makeSound() const;
 };
-
-#endif

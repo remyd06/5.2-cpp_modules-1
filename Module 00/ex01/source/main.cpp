@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdedola <rdedola@student.42nice.fr>        +#+  +:+       +#+        */
+/*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/21 16:03:32 by rdedola           #+#    #+#             */
-/*   Updated: 2025/01/22 16:59:01 by rdedola          ###   ########.fr       */
+/*   Updated: 2025/04/02 11:08:36 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main()
 
 	while (1)
 	{
-		std::cout << std::endl << BOLD "Enter a command: " RESET;
+		std::cout << std::endl << BOLD "Enter an order comrade: " RESET;
 		if (!std::getline(std::cin, input))
 		{
 			std::cout << std::endl << RED "PhoneBook Closed." RESET << std::endl;
@@ -50,7 +50,7 @@ int	main()
 			break ;
 		}
 		else
-			std::cout << RED "Invalid command, try again:" RESET;
+			std::cout << RED "Invalid command, try again or gulag:" RESET;
 	}
 	return (0);
 }

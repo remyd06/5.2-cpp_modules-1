@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 09:21:32 by rdedola           #+#    #+#             */
-/*   Updated: 2025/04/02 14:16:28 by rdedola          ###   ########.fr       */
+/*   Created: 2025/05/27 12:07:22 by rdedola           #+#    #+#             */
+/*   Updated: 2025/05/27 13:55:30 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#pragma once
 
 # include <iostream>
 
-class Fixed
+class Animal
 {
 	public:
-		Fixed();
-		Fixed(const Fixed &copy);
-		Fixed &operator = (const Fixed &copy);
-		~Fixed();
-
-		int		getRawBits() const;
-		void	setRawBits(const int raw);
+		Animal();
+		Animal(const Animal &copy);
+		Animal	&operator = (const Animal &copy);
+		virtual ~Animal();
 		
-	private:
-		int					_nb;
-		static const int	_bit = 8;
-};
+		std::string			getType() const;
+		virtual void		makeSound() const;
 
-#endif
+	protected:
+		std::string type;
+};

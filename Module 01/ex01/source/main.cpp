@@ -14,7 +14,7 @@
 
 int main()
 {
-    Zombie* horde = zombieHorde(0, "Nazgul");
+    Zombie* horde = zombieHorde(5, "Nazgul");
     std::cout << horde << std::endl;
     delete[] horde;
 }

@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 09:21:32 by rdedola           #+#    #+#             */
-/*   Updated: 2025/04/02 14:16:28 by rdedola          ###   ########.fr       */
+/*   Created: 2025/05/27 12:58:13 by rdedola           #+#    #+#             */
+/*   Updated: 2025/05/27 15:18:59 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#include "Animal.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
 
-# include <iostream>
-
-class Fixed
+int	main()
 {
-	public:
-		Fixed();
-		Fixed(const Fixed &copy);
-		Fixed &operator = (const Fixed &copy);
-		~Fixed();
+	Animal* tab[100];
 
-		int		getRawBits() const;
-		void	setRawBits(const int raw);
-		
-	private:
-		int					_nb;
-		static const int	_bit = 8;
-};
+	for (unsigned int i = 0; i < 100; i++)
+	{
+		if (i < 50)
+			tab[i] = new Dog();
+		else
+			tab[i] = new Cat();
+	}
 
-#endif
+	for (unsigned int i = 0; i < 100; i++)
+	{
+		delete tab[i];
+	}
+	return (0);
+}

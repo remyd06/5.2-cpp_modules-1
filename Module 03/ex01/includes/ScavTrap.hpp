@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 09:21:32 by rdedola           #+#    #+#             */
-/*   Updated: 2025/04/02 14:16:28 by rdedola          ###   ########.fr       */
+/*   Created: 2025/04/03 13:44:33 by rdedola           #+#    #+#             */
+/*   Updated: 2025/04/03 16:15:05 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#pragma once
 
-# include <iostream>
+# include "ClapTrap.hpp"
 
-class Fixed
+class ScavTrap : public ClapTrap
 {
 	public:
-		Fixed();
-		Fixed(const Fixed &copy);
-		Fixed &operator = (const Fixed &copy);
-		~Fixed();
-
-		int		getRawBits() const;
-		void	setRawBits(const int raw);
-		
-	private:
-		int					_nb;
-		static const int	_bit = 8;
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap &copy);
+		ScavTrap	&operator = (const ScavTrap &copy);
+		void		attack(const std::string& target);
+		void		beRepaired(unsigned int amount);
+		void		guardGate();
+		~ScavTrap();
 };
-
-#endif

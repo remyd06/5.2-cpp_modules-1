@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 09:21:32 by rdedola           #+#    #+#             */
-/*   Updated: 2025/04/02 14:16:28 by rdedola          ###   ########.fr       */
+/*   Created: 2025/04/03 09:48:56 by rdedola           #+#    #+#             */
+/*   Updated: 2025/04/03 13:22:57 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#include "ClapTrap.hpp"
 
-# include <iostream>
-
-class Fixed
+int	main()
 {
-	public:
-		Fixed();
-		Fixed(const Fixed &copy);
-		Fixed &operator = (const Fixed &copy);
-		~Fixed();
+	ClapTrap	fizz("Fizz");
+	ClapTrap	fozz(fizz);
 
-		int		getRawBits() const;
-		void	setRawBits(const int raw);
-		
-	private:
-		int					_nb;
-		static const int	_bit = 8;
-};
-
-#endif
+	fizz.attack("Romadolf");
+	fizz.takeDamage(5);
+	fizz.beRepaired(6);
+	fizz.takeDamage(0);
+	fizz.takeDamage(2);
+	fizz.beRepaired(1);
+	fizz.beRepaired(1);
+	fizz.takeDamage(42);
+	fizz.beRepaired(6);
+}

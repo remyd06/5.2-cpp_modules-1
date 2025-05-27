@@ -5,21 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/05 09:21:20 by rdedola           #+#    #+#             */
-/*   Updated: 2025/04/02 14:16:38 by rdedola          ###   ########.fr       */
+/*   Created: 2025/04/03 09:48:56 by rdedola           #+#    #+#             */
+/*   Updated: 2025/04/07 12:20:42 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/Fixed.hpp"
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-int main( void ) 
+int	main()
 {
-	Fixed a;
-	Fixed b( a  );
-	Fixed c;
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return 0;
+	ClapTrap	fizz("Fizz");
+
+	fizz.attack("Romadolf");
+	fizz.takeDamage(5);
+	fizz.beRepaired(6);
+	fizz.takeDamage(0);
+	fizz.takeDamage(2);
+	fizz.beRepaired(1);
+	fizz.beRepaired(1);
+	fizz.takeDamage(42);
+	fizz.beRepaired(6);
+	std::cout << "\n";
+
+	ScavTrap	buzz("buzz");
+	
+	buzz.attack("Flodolph");
+	buzz.takeDamage(50);
+	buzz.beRepaired(60);
+	buzz.takeDamage(0);
+	buzz.takeDamage(20);
+	buzz.beRepaired(10);
+	buzz.beRepaired(10);
+	buzz.takeDamage(420);
+	buzz.beRepaired(60);
 }
