@@ -13,6 +13,7 @@
 #pragma once
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
@@ -20,9 +21,9 @@ class Cat : public Animal
 		Cat();
 		Cat(const Cat &copy);
 		Cat	&operator = (const Cat &copy);
-		~Cat();
+		~Cat() override;
 
-		void	makeSound() const;
+		void	makeSound() const override;
 
 	private:
 		Brain* _brain;

@@ -18,6 +18,7 @@ SRC			:=	source/main.cpp \
 				source/Animal.cpp \
 				source/Dog.cpp \
 				source/Cat.cpp \
+				source/Brain.cpp \
 
 # Variables
 CC			:=	c++
