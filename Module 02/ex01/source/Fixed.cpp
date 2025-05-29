@@ -6,7 +6,7 @@
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 09:21:42 by rdedola           #+#    #+#             */
-/*   Updated: 2025/04/02 14:16:24 by rdedola          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:38:07 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,15 +43,10 @@ Fixed			&Fixed::operator=(const Fixed &other)
 	return (*this);
 }
 
-std::ostream	&operator<<(std::ostream &out, const Fixed &fixed)
+std::ostream&	operator<<(std::ostream &out, const Fixed &fixed)
 {
 	out << fixed.toFloat();
 	return (out);
-}
-
-Fixed::~Fixed()
-{
-	std::cout << "Destructor called" << std::endl;
 }
 
 float	Fixed::toFloat() const
@@ -62,4 +57,9 @@ float	Fixed::toFloat() const
 int		Fixed::toInt() const
 {
 	return (this->_number >> this->_number_bits_fraction);
+}
+
+Fixed::~Fixed()
+{
+	std::cout << "Destructor called" << std::endl;
 }

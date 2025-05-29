@@ -6,7 +6,7 @@
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 09:21:32 by rdedola           #+#    #+#             */
-/*   Updated: 2025/04/02 14:16:28 by rdedola          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:37:50 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ class Fixed
 		float	toFloat() const;
 		int		toInt() const;
 
+
 	private:
+	
 		int					_number;
 		static const int	_number_bits_fraction = 8;
 };
 
 std::ostream	&operator<<(std::ostream &out, const Fixed &fixed);
-
