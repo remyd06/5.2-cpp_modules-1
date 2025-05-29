@@ -6,7 +6,7 @@
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 14:03:59 by rdedola           #+#    #+#             */
-/*   Updated: 2025/05/27 15:07:11 by rdedola          ###   ########.fr       */
+/*   Updated: 2025/05/29 12:22:17 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class Cat : public Animal
 		Cat();
 		Cat(const Cat &copy);
 		Cat	&operator = (const Cat &copy);
-		~Cat() override;
+		~Cat();
 
-		void	makeSound() const override;
+		void	makeSound() const;
 
 	private:
 		Brain* _brain;
