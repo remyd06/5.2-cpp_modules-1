@@ -20,7 +20,7 @@ class AAnimal
 	public:
 		AAnimal();
 		AAnimal(const AAnimal &copy);
-		AAnimal	&operator = (const AAnimal &copy);
+		AAnimal	&operator=(const AAnimal &copy);
 		virtual ~AAnimal();
 		
 		std::string			getType() const;
