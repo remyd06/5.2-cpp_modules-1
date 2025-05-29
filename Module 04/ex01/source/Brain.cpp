@@ -6,7 +6,7 @@
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 15:03:49 by rdedola           #+#    #+#             */
-/*   Updated: 2025/05/27 15:03:50 by rdedola          ###   ########.fr       */
+/*   Updated: 2025/05/29 13:05:30 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,12 @@ Brain &Brain::operator=(const Brain &copy)
             this->ideas[i] = copy.ideas[i];
     }
     return (*this);
+}
+
+void	Brain::setIdea(unsigned int index, const std::string idea)
+{
+    if (index <= 100 && index >= 0)
+        this->ideas[index] = idea;
 }
 
 Brain::~Brain()

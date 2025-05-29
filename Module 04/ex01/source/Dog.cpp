@@ -6,7 +6,7 @@
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 13:35:26 by rdedola           #+#    #+#             */
-/*   Updated: 2025/05/27 15:09:33 by rdedola          ###   ########.fr       */
+/*   Updated: 2025/05/29 13:23:42 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,36 @@ Dog::Dog()
 Dog::Dog(const Dog &copy)
 {
 	this->type = copy.type;
+	this->_brain = new Brain(*copy._brain);
 }
 
 Dog	&Dog::operator=(const Dog &copy)
 {
-	this->type = copy.type;
+	if (this != &copy)
+	{
+		this->type = copy.type;
+		if (this->_brain)
+			delete this->_brain;
+		this->_brain = new Brain(*copy._brain);
+	}
 	return (*this);
 }
 
 void	Dog::makeSound() const
 {
 	std::cout << "BARK BARK\n";
+}
+
+void	Dog::setIdea(unsigned int index, const std::string idea)
+{
+	if (index <= 100 && index >= 0)
+        this->_brain->ideas[index] = idea;
+}
+
+void	Dog::getIdea(unsigned int index)
+{
+	if (index <= 100 && index >= 0)
+		std::cout << this->_brain->ideas[index] << std::endl;
 }
 
 Dog::~Dog()

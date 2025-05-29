@@ -6,7 +6,7 @@
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/27 14:03:59 by rdedola           #+#    #+#             */
-/*   Updated: 2025/05/29 12:22:17 by rdedola          ###   ########.fr       */
+/*   Updated: 2025/05/29 13:23:57 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class Cat : public Animal
 		~Cat();
 
 		void	makeSound() const;
+		void	setIdea(unsigned int index, const std::string idea);
+		void	getIdea(unsigned int index);
 
 	private:
 		Brain* _brain;
