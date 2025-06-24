@@ -3,18 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rdedola <rdedola@student.42nice.fr>        +#+  +:+       +#+         #
+#    By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/30 14:39:28 by rdedola           #+#    #+#              #
-#    Updated: 2025/05/30 14:39:28 by rdedola          ###   ########.fr        #
+#    Updated: 2025/06/24 23:39:03 by rdedola          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Program Executable
-EXE			:=	Animal
+EXE			:=	Bureaucrat
 
 # Files
 SRC			:=	source/main.cpp \
+				source/Bureaucrat.cpp \
 
 # Variables
 CC			:=	c++
