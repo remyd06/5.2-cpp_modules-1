@@ -6,14 +6,15 @@
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/30 14:39:18 by rdedola           #+#    #+#             */
-/*   Updated: 2025/06/24 23:54:30 by rdedola          ###   ########.fr       */
+/*   Updated: 2025/07/06 21:17:36 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-int main() {
+int main()
+{
 	try {
 		std::cout << "=== Bureacrates creation. ===\n";
 		Bureaucrat alice("Alice", 2);
