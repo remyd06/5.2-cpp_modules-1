@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+         #
+#    By: rdedola <rdedola@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/05/30 14:39:28 by rdedola           #+#    #+#              #
-#    Updated: 2025/07/08 16:50:58 by rdedola          ###   ########.fr        #
+#    Created: 2025/10/21 23:48:31 by rdedola           #+#    #+#              #
+#    Updated: 2025/10/21 23:48:31 by rdedola          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ SRC			:=	source/main.cpp \
 				source/ShrubberyCreationForm.cpp \
 				source/RobotomyRequestForm.cpp \
 				source/PresidentialPardonForm.cpp \
+
+FILE		:=	garden_shrubbery
 
 # Variables
 CC			:=	c++
@@ -40,7 +42,7 @@ ${EXE}		:	${SRC}
 				
 
 clean		:
-				rm -rf ${EXE}
+				rm -rf ${EXE} ${FILE}
 				@echo "${COLOR}╔══════════════════════════╗${DEF_COLOR}"
 				@echo "${COLOR}║    Bureaucrat cleaned!   ║${DEF_COLOR}"
 				@echo "${COLOR}╚══════════════════════════╝${DEF_COLOR}"

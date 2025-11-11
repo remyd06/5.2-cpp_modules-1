@@ -5,36 +5,53 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 16:25:09 by rdedola           #+#    #+#             */
-/*   Updated: 2025/07/08 16:38:06 by rdedola          ###   ########.fr       */
+/*   Created: 2025/11/11 15:21:32 by rdedola           #+#    #+#             */
+/*   Updated: 2025/11/11 15:21:32 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
-#include "AForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include <cstdlib>
-#include <ctime>
 
-RobotomyRequestForm::RobotomyRequestForm(const std::string& target)
-	:	AForm("RobotomyRequestForm", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm()
+	:	AForm::AForm("RobotomyRequestForm", 72, 45)
 {
-	this->target = target;
-	std::cout << "Robotomy constructor called !\n";
+	this->_target = "Unknown target";
+	std::cout << "Default RobotomyRequestForm constructor called" << std::endl;
+}
+
+RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
+	:	AForm::AForm("RobotomyRequestForm", 72, 45)
+{
+	this->_target = target;
+	std::cout << "RobotomyRequestForm constructor called" << std::endl;
+
+}
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy)
+:	AForm(copy)
+{
+	this->_target = copy._target;
+}
+
+RobotomyRequestForm&	RobotomyRequestForm::operator=(const RobotomyRequestForm &copy)
+{
+	this->_target = copy._target;
+	return (*this);
 }
 
 void	RobotomyRequestForm::doAction() const
 {
-	std::srand(std::time(NULL));
-	std::cout << "Brrr Brrr, robotomisation attempt in progress...\n";
-	if (std::rand() % 2 == 0) {
-        std::cout << "Succes : " << this->target << "has been robotomized." << std::endl;
-    } else {
-        std::cout << "Failure : " << this->target << "hasn't been robotomized." << std::endl;
-    }
+	int	nb = rand()% 100 + 1;
+
+	std::cout << "Robotomization in progress..." << std::endl;
+	if (nb >= 50)
+		std::cout << this->_target << " has been robotomized successfully !" << std::endl;
+	else
+		std::cout << this->_target << " has failed his robotomization ..." << std::endl;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
-	std::cout << "Robotomy destructor called !\n";
+	std::cout << "Robotomy destructor called !" <<std::endl;
 }

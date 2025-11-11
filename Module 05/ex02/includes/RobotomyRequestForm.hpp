@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    RobotomyRequestForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/06 21:14:58 by rdedola           #+#    #+#             */
-/*   Updated: 2025/07/08 16:09:38 by rdedola          ###   ########.fr       */
+/*   Created: 2025/11/11 10:31:18 by rdedola           #+#    #+#             */
+/*   Updated: 2025/11/11 10:31:18 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-#include <iostream>
-#include <fstream>
 #include "AForm.hpp"
 
-class  RobotomyRequestForm : public AForm
+class RobotomyRequestForm : public AForm
 {
-public:
-	 RobotomyRequestForm(const std::string& target);
-	~ RobotomyRequestForm();
+	private:
+		std::string _target;
+	public:
+		RobotomyRequestForm();
+		RobotomyRequestForm(const std::string &target);
+		RobotomyRequestForm(const RobotomyRequestForm &copy);
+		RobotomyRequestForm&	operator=(const RobotomyRequestForm &copy);
+		~RobotomyRequestForm();
 
-protected:
-	 void doAction() const;
-
-private:
-	std::string	target;
+		void	doAction() const;
 };

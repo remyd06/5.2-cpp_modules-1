@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+        */
+/*   By: rdedola <rdedola@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/30 14:39:18 by rdedola           #+#    #+#             */
-/*   Updated: 2025/07/08 16:53:50 by rdedola          ###   ########.fr       */
+/*   Created: 2025/10/21 22:44:12 by rdedola           #+#    #+#             */
+/*   Updated: 2025/10/21 22:44:12 by rdedola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,14 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include <cstdlib>
 
-int main() {
-	try {
+int main() 
+{
+	srand(time(NULL));
+
+	try 
+	{
 		Bureaucrat boss("Boss", 137);
 		Bureaucrat bob("bob", 144);
 		Bureaucrat linda("linda", 45);
@@ -64,9 +69,11 @@ int main() {
 		std::cout << "\n";
 		std::cout << "\n";
 
-	} catch (std::exception &e) {
+	} 
+	catch (std::exception &e) 
+	{
 		std::cerr << "Error : " << e.what() << std::endl;
 	}
 
-	return 0;
+	return (0);
 }
