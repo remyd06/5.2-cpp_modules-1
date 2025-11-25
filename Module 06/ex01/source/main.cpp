@@ -18,14 +18,17 @@ int main()
 	Data* originalPtr = &d;
 
 	uintptr_t raw = Serializer::serialize(originalPtr);
-    std::cout << "Adress converted in int : " << raw << std::endl;
+    std::cout << "Adress converted in uintptr_t : " << raw << std::endl;
 
 	Data* recoveredPtr = Serializer::deserialize(raw);
 
-	if (recoveredPtr == originalPtr) {
+	if (recoveredPtr == originalPtr)
+    {
         std::cout << "Pointer succes !" << std::endl;
         std::cout << "Data.message = " << recoveredPtr->message << std::endl;
-    } else {
+    } 
+    else
+    {
         std::cout << "Error, pointer different." << std::endl;
     }
 
