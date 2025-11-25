@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/07/10 20:05:42 by rdedola           #+#    #+#              #
-#    Updated: 2025/07/10 21:36:06 by rdedola          ###   ########.fr        #
+#    Created: 2025/11/17 05:58:51 by rdedola           #+#    #+#              #
+#    Updated: 2025/11/17 05:58:51 by rdedola          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@
 EXE			:=	Scalar
 
 # Files
-SRC			:=	source/main.cpp \
-				source/ScalarConvert.cpp\
+SRC			:=	sources/main.cpp \
+				sources/ScalarConvert.cpp\
 
 
 # Variables
