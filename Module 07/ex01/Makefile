@@ -6,7 +6,7 @@
 #    By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/28 09:53:38 by rdedola           #+#    #+#              #
-#    Updated: 2025/07/28 10:23:56 by rdedola          ###   ########.fr        #
+#    Updated: 2025/11/27 12:08:20 by rdedola          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 EXE			:=	Iter
 
 # Files
-SRC			:=	source/main.cpp \
+SRC			:=	sources/main.cpp \
 
 
 # Variables
