@@ -6,7 +6,7 @@
 #    By: rdedola <rdedola@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/07/28 09:32:54 by rdedola           #+#    #+#              #
-#    Updated: 2025/07/28 09:47:00 by rdedola          ###   ########.fr        #
+#    Updated: 2025/11/27 12:08:39 by rdedola          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 EXE			:=	Template
 
 # Files
-SRC			:=	source/main.cpp \
+SRC			:=	sources/main.cpp \
 
 
 # Variables
